@@ -19,7 +19,7 @@ Our testing is on Ubuntu 18.04 using 2080ti.
 
 ## Prepare datasets
 * Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/master/DATASETS.md) for the preparation of the dataset files. We use Panoptic for evaluation and MPI-INF-3DHP for training. 
-* You can download Panoptic only if you want to test the evaluation code
+* You can download Panoptic only if you want to test the evaluation code.
 * MPI-INF-3DHP is really large after extracting all frames (about 550GB). 
 * You will also need the unlabeled dataset [Cityscapes](https://www.cityscapes-dataset.com/) if you want to run our semi-supervised training code. Please put Cityscapses train/val/test image folders in `imgs` folder like the folder structure bellow:
 
@@ -41,7 +41,8 @@ Our testing is on Ubuntu 18.04 using 2080ti.
 
 ##### We encountered some problems and we write at bellow.
 Panoptic:
-* While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (Notice: the required image format in multiperson is png, so please specify `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox)
+* While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (
+* The required image format in multiperson is png, but we extracted the images into jpg accidentally. Terefore, we adjusted the image names in annotations so we can read it right. For simplicity, we recommend specifying `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox) so nothing needs to be edited. However, we think the results may change a little due to different image format.
 * We were unable to use the preprocess code multiperson provided. We adjusted it ([adjusted code](./misc/preprocess_datasets/full)) to only extract the frames they need and use their processed annotation files to evaluate. The way to run our adjusted code is the same as the original code.
 
 MPI-INF-3DHP:
