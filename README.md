@@ -8,7 +8,7 @@ Our project is base on the following repository. Please follow the instructions 
 CVPR 2020
 [[paper](https://arxiv.org/pdf/2006.08586.pdf)] [[github](https://github.com/JiangWenPL/multiperson)]
 
-#####We encountered some problems in Fetch data and we write at bellow.
+##### We encountered some problems in Fetch data and we write at bellow.
 In Fetch data we need to follow the instructions [here](https://github.com/vchoutas/smplx/tree/master/tools) to convert the models to be compatible with python3. Only "Removing Chumpy objects" part is necessary (Notice: this command needs to run under python2.7). After precessing, we have to rename the file `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` to `SMPL_NEUTRAL.pkl` and put them under `mmdetection/data/smpl`
 
 
