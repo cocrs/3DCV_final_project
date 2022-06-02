@@ -116,6 +116,11 @@ eval_dataset_mapper = dict(
         ann_file='data/mupots-3d/' + 'rcnn/all_sorted.pkl',
         img_prefix='',
     ),
+    ultimatum_subset=dict(
+        type='CommonDataset',
+        ann_file='data/Panoptic/' + 'processed/annotations/160422_ultimatum1_subset.pkl',
+        img_prefix='data/Panoptic/',
+    ),
 )
 
 eval_handler_mapper = dict(
@@ -127,6 +132,7 @@ eval_handler_mapper = dict(
     pizza=PanopticEvalHandler,
     mafia=PanopticEvalHandler,
     mupots=MuPoTSEvalHandler,
+    ultimatum_subset=PanopticEvalHandler,
 )
 
 stable_list = ['mupots']
