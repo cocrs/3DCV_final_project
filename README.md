@@ -20,7 +20,7 @@ Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/mas
 
 ##### We encountered some problems and we write at bellow.
 Panoptic:
-While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (Notice: the required image format in multiperson is png, so please specify `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox.)
+While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (Notice: the required image format in multiperson is png, so please specify `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox)
 We were unable to use the preprocess code multiperson provided. We adjusted it ([adjusted code]()) to only extract the frames they need and use their processed annotation files to evaluate.
 
 MPI-INF-3DHP:
