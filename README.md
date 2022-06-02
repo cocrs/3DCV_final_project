@@ -41,8 +41,8 @@ Our testing is on Ubuntu 18.04 using 2080ti.
 
 ##### We encountered some problems and we write at bellow.
 Panoptic:
-* While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (
-* The required image format in multiperson is png, but we extracted the images into jpg accidentally. Therefore, we adjusted the image names in annotations so we could read them right. For simplicity, we recommend specifying `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox) so nothing needs to be edited. However, we think the results may change a little due to different image format.
+* While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes.
+* The required image format in multiperson is png, but we extracted the images into jpg accidentally. Therefore, we adjusted the image names in annotations so we could read them right. For simplicity, we recommend specifying `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox so nothing needs to be edited. However, we think the results may change a little due to different image format.
 * We were unable to use the preprocess code multiperson provided. We adjusted it ([adjusted code](./misc/preprocess_datasets/full)) to only extract the frames they need and use their processed annotation files to evaluate. The way to run our adjusted code is the same as the original code.
 
 MPI-INF-3DHP:
