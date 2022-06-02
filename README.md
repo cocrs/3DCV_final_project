@@ -8,6 +8,8 @@ Our project is base on the following repository. Please follow the instructions 
 CVPR 2020
 [[paper](https://arxiv.org/pdf/2006.08586.pdf)] [[github](https://github.com/JiangWenPL/multiperson)]
 
+After installation from the original github, you need to clone our repo and put files to the corresponding folders.
+
 ##### We encountered some problems in Fetch data and we write at bellow.
 In Fetch data, we need to follow the instructions [here](https://github.com/vchoutas/smplx/tree/master/tools) to convert the models to be compatible with python3. Only the "Removing Chumpy objects" part is necessary (Notice: this command needs to run under python2.7). After processing, we have to rename the file `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` to `SMPL_NEUTRAL.pkl` and put them under `mmdetection/data/smpl`
 
@@ -47,10 +49,10 @@ MPI-INF-3DHP:
 ## Results
 Method                     | Haggling  | Mafia  | Ultim.  | Pizza  | Mean  | checkpoint |
 -------------------------- | ----------|--------|---------|--------|-------|------------|
-multiperson (github ckpt)  | 129.1     | 132.8  | 153.0   | 153.6  | 142.1 |             |
-our baseline               | 132.5     | 137.4  | 157.9   | 158.9  | 146.7 | [link](https://drive.google.com/file/d/1J7NL5Z5bqLzLgE5X5c3I2DGvWkjJvYhp/view?usp=sharing)            |
-pseudo label               | 132.1     | 134.4  | 153.4   | 157.6  | 144.4 | [link](https://drive.google.com/file/d/1nGKWp84flcobT1Dcj3xNb3guzqV8k353/view?usp=sharing)            |
-confiden pseudo label      | 130.4     | 135.7  | 153.6   | 156.3  | 144.0 | [link](https://drive.google.com/file/d/1d0YQkXEZEMzGSY1BudiDVbPFYwjbm7zu/view?usp=sharing)            |
+multiperson (github ckpt)  | 129.1     | 132.8  | 153.0   | 153.6  | 142.1 |            |
+our baseline               | 132.5     | 137.4  | 157.9   | 158.9  | 146.7 | [link](https://drive.google.com/file/d/1J7NL5Z5bqLzLgE5X5c3I2DGvWkjJvYhp/view?usp=sharing)    |
+pseudo label               | 132.1     | 134.4  | 153.4   | 157.6  | 144.4 | [link](https://drive.google.com/file/d/1nGKWp84flcobT1Dcj3xNb3guzqV8k353/view?usp=sharing)    |
+confiden pseudo label      | 130.4     | 135.7  | 153.6   | 156.3  | 144.0 | [link](https://drive.google.com/file/d/1d0YQkXEZEMzGSY1BudiDVbPFYwjbm7zu/view?usp=sharing)    |
 
 
 ## Run evaluation code
@@ -84,7 +86,7 @@ do
     i=$(($i+1))
 done
 ```
-We use this baseline model to generate pseudo labels on Cityscapes dataset by this [code](). Add `--color_jitter` if you want to generate confident pseudo label. It will take quite a long time. We provide our generated [pseudo label](https://drive.google.com/file/d/1UOtX1d-J3smtxA3C_ygnH16GSlUnGgIA/view?usp=sharing) and [confident pseudo label](https://drive.google.com/file/d/1tSeG1O_GiYub-z_xCh8xf6NrXOt8gOBL/view?usp=sharing). Please put them in `mmdetection/data/pseudo/annotations/`.
+We use this baseline model to generate pseudo labels on Cityscapes dataset by running the following code. Add `--color_jitter` if you want to generate confident pseudo label. It will take quite a long time. We provide our generated [pseudo label](https://drive.google.com/file/d/1UOtX1d-J3smtxA3C_ygnH16GSlUnGgIA/view?usp=sharing) and [confident pseudo label](https://drive.google.com/file/d/1tSeG1O_GiYub-z_xCh8xf6NrXOt8gOBL/view?usp=sharing). Please put them in `mmdetection/data/pseudo/annotations/`.
 ```bash
 python3 tools/pseudo_label.py --config=configs/smpl/tune.py --image_folder=/path/to/cityscapes/ --output_folder=results/ --ckpt /path/to/baseline/ckpt/
 ```
