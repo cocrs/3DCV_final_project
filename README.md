@@ -45,6 +45,12 @@ MPI-INF-3DHP:
 * Pose and Shape npz files are also needed, but not provided in this multiperson repo. We find it in another repo [link](http://visiondata.cis.upenn.edu/spin/dataset_extras.tar.gz). We need the `mpi_inf_3dhp_train.npz`. Please put it in `mmdetection/data/mpi_inf_3dhp/extras`
 
 ## Results
+Method                     | Haggling  | Mafia  | Ultim.  | Pizza  | Mean  | checkpoint |
+-------------------------- | ----------|--------|---------|--------|-------|------------|
+multiperson (github ckpt)  | 129.1     | 132.8  | 153.0   | 153.6  | 142.1 |             |
+our baseline               | 132.5     | 137.4  | 157.9   | 158.9  | 146.7 | [link](https://drive.google.com/file/d/1J7NL5Z5bqLzLgE5X5c3I2DGvWkjJvYhp/view?usp=sharing)            |
+pseudo label               | 132.1     | 134.4  | 153.4   | 157.6  | 144.4 | [link](https://drive.google.com/file/d/1nGKWp84flcobT1Dcj3xNb3guzqV8k353/view?usp=sharing)            |
+confiden pseudo label      | 130.4     | 135.7  | 153.6   | 156.3  | 144.0 | [link](https://drive.google.com/file/d/1d0YQkXEZEMzGSY1BudiDVbPFYwjbm7zu/view?usp=sharing)            |
 
 
 ## Run evaluation code
@@ -53,7 +59,7 @@ You could use our pretrained checkpoint to evaluate on Panoptic.
 Example usage:
 ```
 cd mmdetection
-python3 tools/full_eval.py configs/smpl/tune.py haggling --ckpt /path/to/ckpt
+python3 tools/full_eval.py configs/smpl/tune.py haggling --ckpt /path/to/ckpt --seed 1111
 ```
 
 The ```haggling``` option can be replaced with other dataset or sequences based on the type of evaluation you want to perform:
@@ -89,11 +95,11 @@ python3 tools/train.py configs/smpl/tune_mpi_semi.py.py --load_pretrain ./data/c
 python3 tools/train.py configs/smpl/tune_mpi_semi.py --seed 1111
 
 # For confident pseudo label model
-python3 tools/train.py configs/smpl/tune_mpi_cond_semi.py --load_pretrain ./data/checkpoint.pt --seed 1111
+python3 tools/train.py configs/smpl/tune_mpi_conf_semi.py --load_pretrain ./data/checkpoint.pt --seed 1111
 i=0
 while [ $i -le 5 ]
 do
-    python3 tools/train.py configs/smpl/tune_mpi_cond_semi.py --seed 1111
+    python3 tools/train.py configs/smpl/tune_mpi_conf_semi.py --seed 1111
     i=$(($i+1))
 done
 ```
