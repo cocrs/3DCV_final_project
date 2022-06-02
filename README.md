@@ -20,7 +20,7 @@ Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/mas
 
 ##### We encountered some problems and we write at bellow.
 Panoptic:
-While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes.
+While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (Notice: the required image format in multiperson is png, so please specify './scripts/extractAll.sh [sequence] png' while extracting frames using panoptic-toolbox.)
 We were unable to use the preprocess code multiperson provided. We adjusted it ([adjusted code]()) to only extract the frames they need and use their processed annotation files to evaluate.
 
 MPI-INF-3DHP:
@@ -51,7 +51,7 @@ Regarding the evaluation:
 ## Run training code
 
 Please make sure you have downloaded checkpoint.pt from multiperson and put it in the folder `data`.
-We resume from checkpoint.pt and first finetune on 500 images we sampled from MPI-INF-3DHP as our baseline. The [annotations]() for 500 images we sampled. Please put it in `mmdetection/data/pseudo/annotations`
+We resume from checkpoint.pt and first finetune on 500 images we sampled from MPI-INF-3DHP as our baseline. The annotations for 500 images we sampled is [here](https://drive.google.com/file/d/15MWagBYX4HUAMRuNihpA2qlAW3U-DmKx/view?usp=sharing). Please put it in `mmdetection/data/pseudo/annotations`
 ```bash
 python3 tools/train.py configs/smpl/tune_mpi.py --load_pretrain ./data/checkpoint.pt --seed 1111
 i=0
