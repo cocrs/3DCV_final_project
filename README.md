@@ -16,7 +16,7 @@ In Fetch data, we need to follow the instructions [here](https://github.com/vcho
 Our testing is on Ubuntu 18.04 using 2080ti.
 
 ## Prepare datasets
-Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/master/DATASETS.md) for the preparation of the dataset files. We use Panoptic for evaluation and MPI-INF-3DHP for training. You can download Panoptic only if you want to test the evaluation code because MPI-INF-3DHP is really large after extracting all frames (about 550GB). You will also need the unlabeled data [Cityscapes](https://www.cityscapes-dataset.com/) we used if you want to test our semi-supervised training code.
+Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/master/DATASETS.md) for the preparation of the dataset files. We use Panoptic for evaluation and MPI-INF-3DHP for training. You can download Panoptic only if you want to test the evaluation code because MPI-INF-3DHP is really large after extracting all frames (about 550GB). You will also need the unlabeled data [Cityscapes](https://www.cityscapes-dataset.com/) we used if you want to run our semi-supervised training code.
 
 ##### We encountered some problems and we write at bellow.
 Panoptic:
