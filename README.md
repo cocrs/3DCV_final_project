@@ -54,6 +54,18 @@ our baseline               | 132.5     | 137.4  | 157.9   | 158.9  | 146.7 | [li
 pseudo label               | 132.1     | 134.4  | 153.4   | 157.6  | 144.4 | [link](https://drive.google.com/file/d/1nGKWp84flcobT1Dcj3xNb3guzqV8k353/view?usp=sharing)    |
 confident pseudo label      | 130.4     | 135.7  | 153.6   | 156.3  | 144.0 | [link](https://drive.google.com/file/d/1d0YQkXEZEMzGSY1BudiDVbPFYwjbm7zu/view?usp=sharing)    |
 
+## Run demo code
+You could use our pretrained checkpoint to run the demo on the images in the folder.
+Example usage:
+```
+cd mmdetection
+python3 tools/our_demo.py --config=configs/smpl/tune.py --image_folder=data/Panoptic --output_folder=results/ --ckpt /path/to/model --annotation=data/Panoptic/processed/annotations/160906_pizza1.pkl
+```
+The annotation file ```160906_pizza1.pkl``` can be replaced with other annotation files:
+- ```160422_mafia2.pkl```: mafia sequence of Panoptic
+- ```160422_ultimatum1.pkl```: ultimatum sequence of Panoptic
+- ```160422_haggling1.pkl``: haggling sequence of Panoptic
+- ```160906_pizza1.pkl```: pizza sequence of Panoptic
 
 ## Run evaluation code
 You could use our pretrained checkpoint to evaluate on Panoptic.
@@ -68,6 +80,7 @@ The ```haggling``` option can be replaced with other dataset or sequences based 
 - `mafia`: mafia sequence of Panoptic
 - `ultimatum`: ultimatum sequence of Panoptic
 - `haggling`: haggling sequence of Panoptic
+- `pizza`: pizza sequence of Panoptic
 
 Regarding the evaluation:
 - For Panoptic, the command will compute the MPJPE for each sequence.
