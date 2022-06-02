@@ -64,7 +64,7 @@ python3 tools/our_demo.py --config=configs/smpl/tune.py --image_folder=data/Pano
 The annotation file ```160906_pizza1.pkl``` can be replaced with other annotation files:
 - ```160422_mafia2.pkl```: mafia sequence of Panoptic
 - ```160422_ultimatum1.pkl```: ultimatum sequence of Panoptic
-- ```160422_haggling1.pkl``: haggling sequence of Panoptic
+- ```160422_haggling1.pkl```: haggling sequence of Panoptic
 - ```160906_pizza1.pkl```: pizza sequence of Panoptic
 
 ## Run evaluation code
