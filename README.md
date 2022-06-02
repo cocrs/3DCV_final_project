@@ -20,13 +20,13 @@ Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/mas
 
 ##### We encountered some problems and we write at bellow.
 Panoptic:
-While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (Notice: the required image format in multiperson is png, so please specify `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox)
-We were unable to use the preprocess code multiperson provided. We adjusted it ([adjusted code]()) to only extract the frames they need and use their processed annotation files to evaluate.
+* While downloading Panoptic using the script from [panoptic-toolbox](https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox), it is normal to see that some links are not available, and that does not affect the following processes. (Notice: the required image format in multiperson is png, so please specify `./scripts/extractAll.sh [sequence] png` while extracting frames using panoptic-toolbox)
+* We were unable to use the preprocess code multiperson provided. We adjusted it ([adjusted code]()) to only extract the frames they need and use their processed annotation files to evaluate. The way to run our adjusted code is the same as the original code.
 
 MPI-INF-3DHP:
-There are two links in the [official website of the dataset](https://vcai.mpi-inf.mpg.de/projects/SingleShotMultiPerson/). The one on the left(MuCo-3DHP Scripts) is the one we want.
-We only get videos after downloading. Like Panoptic, we need to use the preprocess code to extract the frames ([adjusted code]()).
-Pose and Shape npz files are also needed, but not provided in this multiperson repo. We find it in another repo [link](http://visiondata.cis.upenn.edu/spin/dataset_extras.tar.gz). We need the `mpi_inf_3dhp_train.npz`. Please put it in `mmdetection/data/mpi_inf_3dhp/extras`
+* There are two links in the [official website of the dataset](https://vcai.mpi-inf.mpg.de/projects/SingleShotMultiPerson/). The one on the left(MuCo-3DHP Scripts) is the one we want.
+* We only get videos after downloading. Like Panoptic, we need to use the preprocess code to extract the frames ([adjusted code]()).
+* Pose and Shape npz files are also needed, but not provided in this multiperson repo. We find it in another repo [link](http://visiondata.cis.upenn.edu/spin/dataset_extras.tar.gz). We need the `mpi_inf_3dhp_train.npz`. Please put it in `mmdetection/data/mpi_inf_3dhp/extras`
 
 ## Results
 
