@@ -1,4 +1,8 @@
-# 3DCV final: Semi-spervised Learning for Reconstruction of Multiple Humans from a single image
+# 3DCV final project: Semi-spervised Learning for Reconstruction of Multiple Humans from a single image
+
+組別: 10
+
+成員: R10922024 謝宇星, R10922052 陳冠盛, R10922136 黃奕誠
 
 ## Installation instructions
 
@@ -77,10 +81,10 @@ You could use our pretrained checkpoint to evaluate on Panoptic.
 Example usage:
 ```
 cd mmdetection
-python3 tools/full_eval.py configs/smpl/tune.py haggling --ckpt /path/to/ckpt --seed 1111
+python3 tools/full_eval.py configs/smpl/tune.py ultimatum_subset --ckpt /path/to/ckpt --seed 1111
 ```
 
-The ```haggling``` option can be replaced with other dataset or sequences based on the type of evaluation you want to perform:
+The ```ultimatum_subset``` is the 50 samples we provide in our github for testing. You can replace it with the options bellow based on the type of evaluation you want to perform if you have downloaded the whole sequences from Panoptic dataset:
 - `mafia`: mafia sequence of Panoptic
 - `ultimatum`: ultimatum sequence of Panoptic
 - `haggling`: haggling sequence of Panoptic
@@ -110,7 +114,7 @@ python3 tools/pseudo_label.py --config=configs/smpl/tune.py --image_folder=/path
 Again, we resume from checkpoint.pt, and use 500 labeled images from MPI-INF-3DHP + pseudo labeled data from Cityscapes dataset to train our model.
 ```bash
 # For pseudo label model
-python3 tools/train.py configs/smpl/tune_mpi_semi.py.py --load_pretrain ./data/checkpoint.pt --seed 1111
+python3 tools/train.py configs/smpl/tune_mpi_semi.py --load_pretrain ./data/checkpoint.pt --seed 1111
 python3 tools/train.py configs/smpl/tune_mpi_semi.py --seed 1111
 
 # For confident pseudo label model
