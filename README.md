@@ -1,8 +1,8 @@
-# 3DCV final project: Semi-spervised Learning for Reconstruction of Multiple Humans from a single image
+# 3DCV2022 final project: Semi-spervised Learning for Reconstruction of Multiple Humans from a single image
 
-組別: 10
+Group: 10
 
-成員: R10922024 謝宇星, R10922052 陳冠盛, R10922136 黃奕誠
+Team members: R10922024 謝宇星, R10922052 陳冠盛, R10922136 黃奕誠
 
 ## Installation instructions
 
@@ -23,7 +23,7 @@ Our testing is on Ubuntu 18.04 using 2080ti.
 
 ## Prepare datasets
 * Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/master/DATASETS.md) for the preparation of the dataset files. We use Panoptic for evaluation and MPI-INF-3DHP for training. 
-* You can download Panoptic only if you want to test the evaluation code.
+* You can download Panoptic only if you want to test the evaluation code (We provide 50 samples in `mmdetection/data` for testing).
 * MPI-INF-3DHP is really large after extracting all frames (about 550GB). 
 * You will also need the unlabeled dataset [Cityscapes](https://www.cityscapes-dataset.com/) if you want to run our semi-supervised training code. Please put Cityscapses train/val/test image folders in `imgs` folder like the folder structure bellow:
 
