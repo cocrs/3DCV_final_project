@@ -228,7 +228,7 @@ lr_config = SequenceLrUpdaterHook(
 checkpoint_config = dict(interval=1)
 # yapf:disable
 # runtime settings
-total_epochs = 10
+total_epochs = 1
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
 work_dir = './work_dirs/tune_semi_500'
