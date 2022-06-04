@@ -114,7 +114,7 @@ python3 tools/pseudo_label.py --config=configs/smpl/tune.py --image_folder=/path
 Again, we resume from checkpoint.pt, and use 500 labeled images from MPI-INF-3DHP + pseudo labeled data from Cityscapes dataset to train our model.
 ```bash
 # For pseudo label model
-python3 tools/train.py configs/smpl/tune_mpi_semi.py.py --load_pretrain ./data/checkpoint.pt --seed 1111
+python3 tools/train.py configs/smpl/tune_mpi_semi.py --load_pretrain ./data/checkpoint.pt --seed 1111
 python3 tools/train.py configs/smpl/tune_mpi_semi.py --seed 1111
 
 # For confident pseudo label model
