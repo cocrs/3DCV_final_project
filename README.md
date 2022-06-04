@@ -1,8 +1,8 @@
-# 3DCV final project: Semi-spervised Learning for Reconstruction of Multiple Humans from a single image
+# 3DCV2022 final project: Semi-spervised Learning for Reconstruction of Multiple Humans from a single image
 
-組別: 10
+Group: 10
 
-成員: R10922024 謝宇星, R10922052 陳冠盛, R10922136 黃奕誠
+Team members: R10922024 謝宇星, R10922052 陳冠盛, R10922136 黃奕誠
 
 ## Installation instructions
 
