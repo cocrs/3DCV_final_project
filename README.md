@@ -23,7 +23,7 @@ Our testing is on Ubuntu 18.04 using 2080ti.
 
 ## Prepare datasets
 * Please refer to [DATASETS.md](https://github.com/JiangWenPL/multiperson/blob/master/DATASETS.md) for the preparation of the dataset files. We use Panoptic for evaluation and MPI-INF-3DHP for training. 
-* You can download Panoptic only if you want to test the evaluation code.
+* You can download Panoptic only if you want to test the evaluation code (We provide 50 samples in `mmdetection/data` for testing).
 * MPI-INF-3DHP is really large after extracting all frames (about 550GB). 
 * You will also need the unlabeled dataset [Cityscapes](https://www.cityscapes-dataset.com/) if you want to run our semi-supervised training code. Please put Cityscapses train/val/test image folders in `imgs` folder like the folder structure bellow:
 
